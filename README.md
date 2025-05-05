@@ -1,2 +1,1 @@
-Readme
 Gameonix Esports & Gaming
