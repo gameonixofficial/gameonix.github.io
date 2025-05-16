@@ -170,7 +170,8 @@ function getXCount(amount) {
   if (amount >= 10000) return 5;
   if (amount >= 1000) return 4;
   if (amount >= 100) return 3;
-  return 2;
+  if (amount >= 10) return 2;
+  return 1;
 }
 
 fetch("https://script.google.com/macros/s/AKfycby9HQgh50ukTd8CvIubUeq9FfiVUb1f0e8-opT5DNVEkXqQs_7I6d3XJ3l9C5m_1FYEeQ/exec")
