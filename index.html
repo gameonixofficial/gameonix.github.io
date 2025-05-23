@@ -137,6 +137,7 @@
       <h2>Goal: ₹10,00,000</h2>
       <p><strong>Raised:</strong> ₹<span id="raised-amount">0</span></p>
       <progress id="progress-bar" value="0" max="1000000"></progress>
+      <p>Total Contributors: <span id="contributor-count">0</span></p>
     </div>
 
     <div class="form-section">
@@ -197,6 +198,7 @@ fetch("https://script.google.com/macros/s/AKfycby9HQgh50ukTd8CvIubUeq9FfiVUb1f0e
 
     document.getElementById("raised-amount").textContent = totalAmount.toLocaleString("en-IN");
     document.getElementById("progress-bar").value = totalAmount;
+    document.getElementById("contributor-count").textContent = data.length;
   })
   .catch(err => {
     console.error("Failed to fetch contributor data", err);
